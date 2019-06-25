@@ -19,8 +19,6 @@
   if($datasource_obj->id && in_array(SCRIPT,array("datasources_view","datasources_edit"))){
    $nav->addItem(api_text("nav-operations"),null,null,"active");
    $nav->addSubItem(api_text("datasources_edit"),"?mod=".MODULE."&scr=datasources_edit&idDatasource=".$datasource_obj->id,(api_checkAuthorization("databases-manage")));
-   $nav->addSubSeparator();
-   $nav->addSubItem(api_text("datasources-operations-specification_add"),"?mod=".MODULE."&scr=datasources_view&tab=specifications&act=specification_add&idDatasource=".$datasource_obj->id,(api_checkAuthorization("databases-manage")));
   }else{
    $nav->addItem(api_text("datasources_edit-add"),"?mod=".MODULE."&scr=datasources_edit",(api_checkAuthorization("databases-manage")));
   }
