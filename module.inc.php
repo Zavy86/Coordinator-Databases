@@ -3,8 +3,8 @@
  * Databases
  *
  * @package Coordinator\Modules\Databases
- * @company Cogne Acciai Speciali s.p.a
- * @authors Manuel Zavatta <manuel.zavatta@cogne.com>
+ * @author  Manuel Zavatta <manuel.zavatta@gmail.com>
+ * @link    http://www.coordinator.it
  */
  // definitions
  $module_name="databases";
