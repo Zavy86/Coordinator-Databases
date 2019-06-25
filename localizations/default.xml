@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-->
+ ! Databases - Default localization
+ !
+ ! @package Coordinator\Modules\Databases
+ ! @author  Manuel Zavatta <manuel.zavatta@gmail.com>
+ ! @link    http://www.coordinator.it
+<!-->
+<locale>
+
+ <!-- module -->
+ <text key="databases">Databases</text>
+ <text key="databases-description">Coordinator databases tools</text>
+
+ <!-- authorizations -->
+ <text key="databases-manage">Gestione</text>
+ <text key="databases-manage-description">Gestione modulo Databases</text>
+
+ <!-- alerts -->
+ <text key="databases_alert-datasource-error">Si è verificato un errore durante il salvataggio della fonte di dati</text>
+ <text key="databases_alert-datasource-exists">La fonte di dati non è stata trovata</text>
+ <text key="databases_alert-datasource-created">La fonte di dati è stata creata</text>
+ <text key="databases_alert-datasource-updated">La fonte di dati è stata aggiornata</text>
+ <text key="databases_alert-datasource-deleted">La fonte di dati è stata eliminata</text>
+ <text key="databases_alert-datasource-undeleted">La fonte di dati è stata ripristinata</text>
+ <text key="databases_alert-datasource-removed">La fonte di dati è stata rimossa</text>
+
+ <!-- events -->
+ <text key="databases_event-datasource-created">Datasource creato</text>
+ <text key="databases_event-datasource-updated">Datasource aggiornato</text>
+ <text key="databases_event-datasource-deleted">Datasource eliminato</text>
+ <text key="databases_event-datasource-undeleted">Datasource ripristinato</text>
+
+ <!-- datasource typologies -->
+ <text key="databases_datasource_typology-coordinator">Coordinator</text>
+ <text key="databases_datasource_typology-reporting">Reportistica</text>
+
+ <!-- datasource connectors -->
+ <text key="databases_datasource_connector-mysql">MySQL</text>
+ <text key="databases_datasource_connector-oci">Oracle (OCI)</text>
+
+ <!-- datasources_list -->
+ <text key="datasources_list">Datasources</text>
+ <text key="datasources_list-description">Lista delle fonti di dati</text>
+ <text key="datasources_list-tr-unvalued">Non sono presenti fonti di dati da mostrare..</text>
+ <text key="datasources_list-th-name">Datasource</text>
+ <text key="datasources_list-th-description">Descrizione</text>
+ <text key="datasources_list-td-view">Visualizza datasource</text>
+ <text key="datasources_list-td-edit">Modifica datasource</text>
+ <text key="datasources_list-td-delete">Elimina datasource</text>
+ <text key="datasources_list-td-delete-confirm">Confermi di voler eliminare questo datasource?</text>
+ <text key="datasources_list-td-undelete">Rispristina datasource</text>
+ <text key="datasources_list-td-undelete-confirm">Confermi di voler ripristinare questo datasource?</text>
+
+ <!-- datasources_view -->
+ <text key="datasources_view">Datasource: <![CDATA[{0}]]></text>
+ <text key="datasources_view-alert-deleted">Attenzione, questa fonte di dati è stata eliminata!</text>
+ <text key="datasources_view-dt-name">Datasource</text>
+ <text key="datasources_view-dt-typology">Tipologia</text>
+ <text key="datasources_view-dt-description">Descrizione</text>
+ <text key="datasources_view-tab-informations">Informazioni</text>
+ <text key="datasources_view-tab-events">Eventi</text>
+
+ <!-- datasources_view-informations -->
+ <text key="datasources_view-informations-dt-connector">Connettore</text>
+ <text key="datasources_view-informations-dt-hostname">Hostname</text>
+ <text key="datasources_view-informations-dt-database">Database</text>
+ <text key="datasources_view-informations-dt-username">Username</text>
+ <text key="datasources_view-informations-dt-password">Password</text>
+ <text key="datasources_view-informations-dt-tns">TNS</text>
+ <text key="datasources_view-informations-dt-queries">Queries</text>
+
+ <!-- datasources_edit -->
+ <text key="datasources_edit">Modifica datasource</text>
+ <text key="datasources_edit-add">Nuovo datasource</text>
+ <text key="datasources_edit-ff-typology">Tipologia</text>
+ <text key="datasources_edit-ff-typology-select">Seleziona una tipologia..</text>
+ <text key="datasources_edit-ff-name">Datasource</text>
+ <text key="datasources_edit-ff-name-placeholder">Nome della fonte di dati</text>
+ <text key="datasources_edit-ff-description">Descrizione</text>
+ <text key="datasources_edit-ff-description-placeholder">Eventuale descrizione della fonte di dati</text>
+ <text key="datasources_edit-ff-connector">Connettore</text>
+ <text key="datasources_edit-ff-connector-select">Seleziona un connettore..</text>
+ <text key="datasources_edit-ff-hostname">Hostname</text>
+ <text key="datasources_edit-ff-hostname-placeholder">Hostname o indirizzo IP del database</text>
+ <text key="datasources_edit-ff-database">Database</text>
+ <text key="datasources_edit-ff-database-placeholder">Nome del database</text>
+ <text key="datasources_edit-ff-username">Username</text>
+ <text key="datasources_edit-ff-username-placeholder">Utente del database</text>
+ <text key="datasources_edit-ff-password">Password</text>
+ <text key="datasources_edit-ff-password-placeholder">Password del database</text>
+ <text key="datasources_edit-ff-tns">TNS</text>
+ <text key="datasources_edit-ff-tns-placeholder">Eventuale Transparent Network Substrate per la connessione al database</text>
+ <text key="datasources_edit-ff-queries">Queries</text>
+ <text key="datasources_edit-ff-queries-placeholder">Eventuali queries da eseguire dopo la connessione al database</text>
+ <text key="datasources_edit-fc-delete-confirm">Confermi di voler eliminare questa fonte di dati?</text>
+ <text key="datasources_edit-fc-remove-confirm">Confermi di voler rimuovere irrecuperabilmente questa fonte di dati dal database?</text>
+
+</locale>
