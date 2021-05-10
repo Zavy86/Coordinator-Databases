@@ -1,21 +1,21 @@
 <?php
 /**
- * Subsidiaries Reports - Template Entry Typology
+ * Databases - Datasource Typology
  *
- * @package Coordinator\Modules\SubsidiariesReports
+ * @package Coordinator\Modules\Databases
  * @company Cogne Acciai Speciali s.p.a
  */
 
 /**
- * Subsidiaries Reports, Template Entry Typology class
+ * Databases, Template Entry Typology class
  */
-class cSubsidiariesReportsTemplateEntryTypology extends cTranscoding{
+class cDatabasesDatasourceTypology extends cTranscoding{
 
 	/** {@inheritdoc} */
 	protected static function datas(){
 		return array(
-		 ["fillable",api_text("cSubsidiariesReportsTemplateEntryTypology-fillable"),"fa-edit"],
-		 ["calculated",api_text("cSubsidiariesReportsTemplateEntryTypology-calculated"),"fa-cog"]
+		 ["coordinator",api_text("cDatabasesDatasourceTypology-coordinator"),"fa-database"],
+		 ["reporting",api_text("cDatabasesDatasourceTypology-reporting"),"fa-chart"]
 		);
 	}
 

@@ -1,21 +1,21 @@
 <?php
 /**
- * Databases - Datasource Typology
+ * Databases - Datasource Connector
  *
  * @package Coordinator\Modules\Databases
  * @company Cogne Acciai Speciali s.p.a
  */
 
 /**
- * Databases, Template Entry Typology class
+ * Databases, Template Entry Connector class
  */
-class cDatabasesDatasourceTypology extends cTranscoding{
+class cDatabasesDatasourceConnector extends cTranscoding{
 
 	/** {@inheritdoc} */
 	protected static function datas(){
 		return array(
-		 ["coordinator",api_text("cDatabasesDatasourceTypology-coordinator"),"fa-cog"],
-		 ["reporting",api_text("cDatabasesDatasourceTypology-reporting"),"fa-cog"]
+		 ["mysql",api_text("cDatabasesDatasourceConnector-mysql"),"fa-maxcdn"],
+		 ["oci",api_text("cDatabasesDatasourceConnector-oci"),"fa-opera"]
 		);
 	}
 
