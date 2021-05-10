@@ -66,7 +66,8 @@
  <text key="nav-datasources-operations-test">Test connection</text>
 
  <!-- datasources_list -->
- <text key="datasources_list">Reports</text>
+ <text key="datasources_list">Datasources</text>
+ <text key="datasources_list-description">Available datasources</text>
  <text key="datasources_list-tr-unvalued">There are no datasources to show..</text>
 
  <!-- datasources_view -->

@@ -6,14 +6,13 @@
  * @author  Manuel Zavatta <manuel.zavatta@gmail.com>
  * @link    http://www.coordinator.it
  */
+
 // build application
 $app=new strApplication();
 // build nav object
 $nav=new strNav("nav-tabs");
 // dashboard
 $nav->addItem(api_icon("fa-th-large",null,"hidden-link"),"?mod=".MODULE."&scr=dashboard");
-// management
-if(api_checkAuthorization("databases-manage")){$nav->addItem(api_text("nav-management"),api_url(["scr"=>"management"]));}
 
 /**
  * Datasources
@@ -30,5 +29,6 @@ if(api_script_prefix()=="datasources"){
 		//$nav->addSubSeparator();$nav->addSubItem(api_text("nav-datasources-operations-member_add"),api_url(["scr"=>"datasources_view","tab"=>"members","act"=>"member_add","idDatasource"=>$datasource_obj->id]),(api_checkAuthorization("datasources-manage")));
 	}
 }
+
 // add nav to html
 $app->addContent($nav->render(false));
