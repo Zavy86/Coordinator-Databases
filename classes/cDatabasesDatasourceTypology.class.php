@@ -14,8 +14,8 @@ class cDatabasesDatasourceTypology extends cTranscoding{
 	/** {@inheritdoc} */
 	protected static function datas(){
 		return array(
-		 ["coordinator",api_text("cDatabasesDatasourceTypology-coordinator"),"fa-database"],
-		 ["reporting",api_text("cDatabasesDatasourceTypology-reporting"),"fa-chart"]
+		 ["coordinator",api_text("cDatabasesDatasourceTypology-coordinator"),"fa-codiepie"],
+		 ["reporting",api_text("cDatabasesDatasourceTypology-reporting"),"fa-database"]
 		);
 	}
 
