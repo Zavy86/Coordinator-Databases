@@ -22,10 +22,10 @@ $form=$datasource_obj->form_edit(["return"=>api_return(["scr"=>"datasources_view
 if($datasource_obj->exists()){
 	$form->addControl("button",api_text("form-fc-cancel"),api_return_url(["scr"=>"datasources_view","idDatasource"=>$datasource_obj->id]));
 	if(!$datasource_obj->deleted){
-		$form->addControl("button",api_text("form-fc-delete"),api_url(["scr"=>"controller","act"=>"delete","obj"=>"cDatasourcesDatasource","idDatasource"=>$datasource_obj->id]),"btn-danger",api_text("cDatasourcesDatasource-confirm-delete"));
+		$form->addControl("button",api_text("form-fc-delete"),api_url(["scr"=>"controller","act"=>"delete","obj"=>"cDatabasesDatasource","idDatasource"=>$datasource_obj->id]),"btn-danger",api_text("cDatabasesDatasource-confirm-delete"));
 	}else{
-		$form->addControl("button",api_text("form-fc-undelete"),api_url(["scr"=>"controller","act"=>"undelete","obj"=>"cDatasourcesDatasource","idDatasource"=>$datasource_obj->id,"return"=>["scr"=>"datasources_view"]]),"btn-warning");
-		$form->addControl("button",api_text("form-fc-remove"),api_url(["scr"=>"controller","act"=>"remove","obj"=>"cDatasourcesDatasource","idDatasource"=>$datasource_obj->id]),"btn-danger",api_text("cDatasourcesDatasource-confirm-remove"));
+		$form->addControl("button",api_text("form-fc-undelete"),api_url(["scr"=>"controller","act"=>"undelete","obj"=>"cDatabasesDatasource","idDatasource"=>$datasource_obj->id,"return"=>["scr"=>"datasources_view"]]),"btn-warning");
+		$form->addControl("button",api_text("form-fc-remove"),api_url(["scr"=>"controller","act"=>"remove","obj"=>"cDatabasesDatasource","idDatasource"=>$datasource_obj->id]),"btn-danger",api_text("cDatabasesDatasource-confirm-remove"));
 	}
 }else{$form->addControl("button",api_text("form-fc-cancel"),api_url(["scr"=>"datasources_list"]));}
 // build grid

@@ -34,7 +34,7 @@ $table->addHeader($filter->link(api_icon("fa-filter",api_text("filters-modal-lin
 $table->addHeader(api_text("cDatabasesDatasource-property-name"),"nowrap");
 $table->addHeader("&nbsp;",null,16);
 $table->addHeader(api_text("cDatabasesDatasource-property-description"),null,"100%");
-$table->addHeader("&nbsp;",null,16);
+$table->addHeaderAction(api_url(["scr"=>"datasources_edit"]),"fa-plus",api_text("table-td-add"),null,"text-right");
 // cycle all datasources
 foreach($datasources_array as $datasource_fobj){
 	// build operation button
