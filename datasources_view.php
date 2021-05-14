@@ -9,17 +9,26 @@
  * @var strApplication $app
  */
 // check authorizations
-api_checkAuthorization("databases-usage","dashboard");
+api_checkAuthorization("databases-manage","dashboard");
 // get objects
 $datasource_obj=new cDatabasesDatasource($_REQUEST["idDatasource"]);
 // check objects
 if(!$datasource_obj->exists()){api_alerts_add(api_text("cDatabasesDatasource-alert-exists"),"danger");api_redirect(api_url(["scr"=>"databases_list"]));}
 // deleted alert
-if($datasource_obj->deleted){api_alerts_add(api_text("cDatabasesDatasource-warning-deleted"),"warning");}
+if($datasource_obj->isDeleted()){api_alerts_add(api_text("cDatabasesDatasource-warning-deleted"),"warning");}
 // include module template
 require_once(MODULE_PATH."template.inc.php");
 // set application title
-$app->setTitle(api_text("datasources-view",$datasource_obj->name));
+$app->setTitle(api_text("datasources_view",$datasource_obj->name));
+// check for test action
+if(ACTION=="test"){
+	try{
+		// try to connect
+		$database_obj=new cDatabasesDatabase($datasource_obj);
+    $database_obj->connect();
+		api_alerts_add(api_text("cDatabasesDatasource-success-connection"),"info");
+	}catch(Exception $e){api_alerts_add(api_tag("strong",api_text("cDatabasesDatasource-danger-connection"))."<br>".$e->getMessage(),"danger");}
+}
 // build databases description list
 $dl=new strDescriptionList("br","dl-horizontal");
 $dl->addElement(api_text("cDatabasesDatasource-property-name"),api_tag("strong",$datasource_obj->name));
