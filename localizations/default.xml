@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-->
+ ! Databases - Default localization
+ !
+ ! @package Coordinator\Modules\Databases
+ ! @author  Manuel Zavatta <manuel.zavatta@gmail.com>
+ ! @link    http://www.coordinator.it
+<!-->
+<locale>
+
+ <!-- module -->
+ <text key="databases">Databases</text>
+ <text key="databases-description">Coordinator databases tools</text>
+
+ <!-- authorizations -->
+ <text key="databases-manage">Gestione</text>
+ <text key="databases-manage-description">Gestione modulo Databases</text>
+
+ <!-- cDatabasesDatabase -->
+ <text key="cDatabasesDatabase">Database</text>
+ <text key="cDatabasesDatabase-alert-connection-failed">Database connection failed!</text>
+
+ <!-- cDatabasesDatasource -->
+ <text key="cDatabasesDatasource">Datasource</text>
+ <text key="cDatabasesDatasource-alert-error">An error occurred while saving the datasource</text>
+ <text key="cDatabasesDatasource-alert-exists">The datasource was not found</text>
+ <text key="cDatabasesDatasource-alert-stored">The datasource has been stored</text>
+ <text key="cDatabasesDatasource-alert-duplicated">The datasource has been duplicated</text>
+ <text key="cDatabasesDatasource-alert-deleted">The datasource has been deleted</text>
+ <text key="cDatabasesDatasource-alert-undeleted">The datasource has been restored</text>
+ <text key="cDatabasesDatasource-alert-removed">The datasource has been removed</text>
+ <text key="cDatabasesDatasource-confirm-duplicate">Are you sure you want to duplicate this datasource?</text>
+ <text key="cDatabasesDatasource-confirm-delete">Are you sure you want to delete this datasource?</text>
+ <text key="cDatabasesDatasource-confirm-undelete">Do you confirm that you want to restore this datasource?</text>
+ <text key="cDatabasesDatasource-confirm-remove">Do you confirm that you want to irretrievably remove this datasource from the database?</text>
+ <text key="cDatabasesDatasource-warning-deleted">Warning, this datasource is deleted!</text>
+ <text key="cDatabasesDatasource-danger-connection">Datasource connection failed!</text>
+ <text key="cDatabasesDatasource-success-connection">Datasource connection succeeded!</text>
+ <text key="cDatabasesDatasource-property-name">Datasource</text>
+ <text key="cDatabasesDatasource-property-description">Description</text>
+ <text key="cDatabasesDatasource-property-typology">Typology</text>
+ <text key="cDatabasesDatasource-property-connector">Connector</text>
+ <text key="cDatabasesDatasource-property-hostname">Hostname</text>
+ <text key="cDatabasesDatasource-property-database">Database</text>
+ <text key="cDatabasesDatasource-property-username">Username</text>
+ <text key="cDatabasesDatasource-property-password">Password</text>
+ <text key="cDatabasesDatasource-property-tns">TNS</text>
+ <text key="cDatabasesDatasource-property-queries">Queries</text>
+ <text key="cDatabasesDatasource-placeholder-name">Datasource name</text>
+ <text key="cDatabasesDatasource-placeholder-description">Optional datasource description</text>
+ <text key="cDatabasesDatasource-placeholder-typology">Select a typology..</text>
+ <text key="cDatabasesDatasource-placeholder-connector">Select a connector..</text>
+ <text key="cDatabasesDatasource-placeholder-hostname">Hostname or IP address</text>
+ <text key="cDatabasesDatasource-placeholder-database">Database name</text>
+ <text key="cDatabasesDatasource-placeholder-username">Access username</text>
+ <text key="cDatabasesDatasource-placeholder-password">Access password</text>
+ <text key="cDatabasesDatasource-placeholder-tns">Optional Transparent Network Substrate for database connection</text>
+ <text key="cDatabasesDatasource-placeholder-queries">Optional queries to be executed after database connection</text>
+
+ <!-- cDatabasesDatasourceTypology -->
+ <text key="cDatabasesDatasourceTypology">Typology</text>
+ <text key="cDatabasesDatasourceTypology-coordinator">Coordinator</text>
+ <text key="cDatabasesDatasourceTypology-reporting">Reporting</text>
+
+ <!-- cDatabasesDatasourceConnector -->
+ <text key="cDatabasesDatasourceConnector">Connector</text>
+ <text key="cDatabasesDatasourceConnector-mysql">MySQL</text>
+ <text key="cDatabasesDatasourceConnector-oci">Oracle (OCI)</text>
+
+ <!-- navigation -->
+ <text key="nav-datasources-list">Datasources</text>
+ <text key="nav-datasources-add">Add datasource</text>
+ <text key="nav-datasources-operations-edit">Edit datasource</text>
+ <text key="nav-datasources-operations-duplicate">Duplicate datasource</text>
+ <text key="nav-datasources-operations-test">Test connection</text>
+
+ <!-- datasources_list -->
+ <text key="datasources_list">Datasources</text>
+ <text key="datasources_list-description">Available datasources</text>
+ <text key="datasources_list-tr-unvalued">There are no datasources to show..</text>
+
+ <!-- datasources_view -->
+ <text key="datasources_view">Datasource: <![CDATA[{0}]]></text>
+ <text key="datasources_view-tab-informations">Informations</text>
+ <text key="datasources_view-tab-logs">Logs</text>
+
+ <!-- datasources_edit -->
+ <text key="datasources_edit">Edit: <![CDATA[{0}]]></text>
+ <text key="datasources_edit-new">New datasource</text>
+
+</locale>
