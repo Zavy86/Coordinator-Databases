@@ -37,6 +37,10 @@ function cDatabasesDatasource_controller($action){
 				$datasource_obj->store($_REQUEST);
 				api_alerts_add(api_text("cDatabasesDatasource-alert-stored"),"success");
 				break;
+			case "duplicate":
+				$datasource_obj->duplicate();
+				api_alerts_add(api_text("cDatabasesDatasource-alert-duplicated"),"success");
+				break;
 			case "delete":
 				$datasource_obj->delete();
 				api_alerts_add(api_text("cDatabasesDatasource-alert-deleted"),"warning");
