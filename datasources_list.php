@@ -40,8 +40,8 @@ foreach($datasources_array as $datasource_fobj){
 	// build operation button
 	$ob=new strOperationsButton();
 	$ob->addElement(api_url(["scr"=>"datasources_edit","idDatasource"=>$datasource_fobj->id,"return"=>["scr"=>"datasources_list"]]),"fa-pencil",api_text("table-td-edit"));
-	if($datasource_fobj->deleted){$ob->addElement(api_url(["scr"=>"controller","act"=>"undelete","obj"=>"cDatabasesDatasource","idDatasource"=>$datasource_fobj->id,"return"=>["scr"=>"management","tab"=>"templates"]]),"fa-trash-o",api_text("table-td-undelete"),true,api_text("cDatabasesDatasource-confirm-undelete"));}
-	else{$ob->addElement(api_url(["scr"=>"controller","act"=>"delete","obj"=>"cDatabasesDatasource","idDatasource"=>$datasource_fobj->id,"return"=>["scr"=>"management","tab"=>"templates"]]),"fa-trash",api_text("table-td-delete"),true,api_text("cDatabasesDatasource-confirm-delete"));}
+	if($datasource_fobj->deleted){$ob->addElement(api_url(["scr"=>"controller","act"=>"undelete","obj"=>"cDatabasesDatasource","idDatasource"=>$datasource_fobj->id,"return"=>["scr"=>"datasources_list"]]),"fa-trash-o",api_text("table-td-undelete"),true,api_text("cDatabasesDatasource-confirm-undelete"));}
+	else{$ob->addElement(api_url(["scr"=>"controller","act"=>"delete","obj"=>"cDatabasesDatasource","idDatasource"=>$datasource_fobj->id,"return"=>["scr"=>"datasources_list"]]),"fa-trash",api_text("table-td-delete"),true,api_text("cDatabasesDatasource-confirm-delete"));}
 	// make table row class
 	$tr_class_array=array();
 	if($datasource_fobj->id==$_REQUEST['idDatasource']){$tr_class_array[]="currentrow";}

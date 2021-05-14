@@ -93,7 +93,7 @@ class cDatabasesDatasource extends cObject{
 		$form->addField("textarea","tns",api_text("cDatabasesDatasource-property-tns"),$this->tns,api_text("cDatabasesDatasource-placeholder-tns"),null,"code",null,"rows='2'");
 		$form->addField("textarea","queries",api_text("cDatabasesDatasource-property-queries"),$this->queries,api_text("cDatabasesDatasource-placeholder-queries"),null,"code",null,"rows='2'");
 		// controls
-		$form->addControl("submit",api_text("form-fc-submit"));
+		$form->addControl("submit",api_text("form-fc-save"));
 		// return
 		return $form;
 	}
