@@ -80,26 +80,63 @@ class cDatabasesDatabase{
 		}
 	}
 
-
-	public function query($statement,$debug){
+	/**
+	 * Query to Database
+	 *
+	 * @param $statement SQL Statement
+	 * @return PDOStatement|false
+	 * @throws Exception
+	 */
+	public function query($statement){
+		// check if is not connected
+		if(!$this->isConnected()){
+			// try to connect
+			$this->connect();
+			if(!$this->isConnected()){return false;}
+		}
 		// check if is connected
-		if(!$this->isConnected()){return false;} /** @todo force connect? */
 		if(!strlen($statement)){return false;}
 		// try to execute query
 		try{return $this->pdo->query($statement);}
-		catch(PDOException $e){throw new Exception($e->getMessage()."<br>Statement: ".$statement);}
+		catch(PDOException $e){throw new Exception($e->getMessage()."<br><br><pre>".$statement."</pre>");}
 	}
 
-
-	public function select($sql){
+	/**
+	 * Select Query
+	 *
+	 * @param $statement SQL Statement
+	 * @return array|false
+	 * @throws Exception
+	 */
+	public function select($statement){
+		// check parameters
+		if(!strlen($statement)){return false;}
 		// try to query
-		$pdo_statement=$this->query($sql);
+		$pdo_statement=$this->query($statement);
 		// fetch object records
-		$pdo_results=$pdo_statement->fetchAll(PDO::FETCH_OBJ);
-		// check results
-		if(!is_array($pdo_results)||!count($pdo_results)){$pdo_results=array();}
+		$pdo_records=$pdo_statement->fetchAll(PDO::FETCH_OBJ);
+		// check for records or build an empty array
+		if(!is_array($pdo_records)||!count($pdo_records)){$pdo_records=array();}
 		// return
-		return $pdo_results;
+		return $pdo_records;
 	}
+
+	/**
+	 * Execute Query
+	 *
+	 * @param $statement SQL Statement
+	 * @return integer Number of affected rows
+	 * @throws Exception
+	 */
+	public function execute($statement){
+		// try to query
+		$pdo_statement=$this->query($statement);
+		// fetch object records
+		$pdo_affected=$pdo_statement->rowCount();
+		// return
+		return (integer)$pdo_affected;
+	}
+
+	/** @todo migliorare, aggiungendo magare selectUniqueObject, selectUniqueValue, Count, ecc.. */
 
 }
